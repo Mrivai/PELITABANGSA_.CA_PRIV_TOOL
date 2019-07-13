@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<title>PELITABANGSA .CA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
+
+	<link rel="stylesheet" type="text/css" href="tool.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
+  </head>
+  <body>
+    <header id="content">
+		<div class="title">
+			<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2><font color="red">PELITA</font><font color="white">BANGSA</font> .CA</h2>
+					<h3>Lights Up The Dark Side Of Indonesia</h3>
+					<h4 id="subtitle"> </h4>
+				</div>
+			</div>
+			</div>
+		</div>
+		
+    </header>
+	<content>
+		<div class="output">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</content>
+    <footer id="footer">
+      <div class="container">
+		<div class="input">
+			<div class="xxx">
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="menu">
+						<div class="owl-carousel owl-theme">
+								<input type="submit" id="sym" value="Symlink">
+								<input type="submit" id="gdork" value="Google">
+								<input type="submit" id="bing" value="Bing">
+								<input type="submit" id="get" value="Get-file">
+								<input type="submit" id="csrf" value="Csrf">
+								<input type="submit" id="obsv1" value="Obfus v1">
+								<input type="submit" id="obsv2" value="Obfus v2">
+								<input type="submit" id="encoder" value="Encoder">
+								<input type="submit" id="hasid" value="Hashid">
+								<input type="submit" id="hashgen" value="HashGen">
+								<input type="submit" id="isup" value="IsUp">
+								<input type="submit" id="revsip" value="Reverse-ip">
+								<input type="submit" id="paste" value="Paste">
+								<input type="submit" id="unphp" value="Unphp">
+								<input type="submit" id="wpbrute" value="Wp-brute">
+								<input type="submit" id="wpscan" value="Wp-scan">
+								<input type="submit" id="shellscan" value="Shell-scan">
+								<input type="submit" id="admfind" value="AdmFind">
+								<input type="submit" id="crime" value="Crime-flare">
+								<input type="submit" id="ftp" value="Ftp">
+								<input type="submit" id="com" value="Commander">
+								<input type="submit" id="val" value="Evals">
+								<input type="submit" id="dl" value="dloader">
+								<input type="submit" id="whois" value="Whois">
+								<input type="submit" id="about" value="About">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+      </div>
+    </footer>
+    
+    <div id="preloader">
+      <div class="loader" id="loader-1"></div>
+    </div>
+	
+    <script src="js/jquery-min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/tool.js"></script>
+	<script src="js/jQuery.scrollText.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		$('#preloader').fadeOut();
+		$('[ data-toggle="tooltip"]').tooltip();
+		var owl = $('.owl-carousel');
+		owl.owlCarousel({
+			loop:true,
+			//nav:true,
+			dots:false,
+			pagination: false,
+			items : 8,
+			itemsDesktop : [1000,8], 
+			itemsDesktopSmall : [900,5],
+			itemsTablet: [600,3],
+			itemsMobile : false 
+		});
+		owl.on('mousewheel', '.owl-stage', function(e) {
+			if (e.deltaY > 0) {
+				owl.trigger('next.owl');
+			} else {
+				owl.trigger('prev.owl');
+			}
+			e.preventDefault();
+		});
+	});
+	</script>
+	<script>
+	(function() {
+
+// Clamp size to a maximum aspect ratio
+function clampAspect(size, maxAspect) {
+  var aspect = size.w / size.h;
+  if (aspect > maxAspect) {
+    size.w = size.h * maxAspect;
+  }
+  // Equivalent to if (aspect < (1.0 / maxAspect)),
+  // where the ratio is reversed for the vertical.
+  else if (aspect * maxAspect < 1.0) {
+    // (We use a reversed ratio here too)
+    size.h = size.w * maxAspect;
+  }
+  return size;
+}
+
+var onResize = function() {
+
+  // Image size
+  var imageSize = {
+    w: 500, h: 200
+  };
+  // Image subject region
+  var subjectRegion = {
+    x: 162, y: 4,
+    w: 154, h: 144
+  };
+
+  // Clamp viewport to 2:1 aspect
+  var viewportSize = clampAspect({
+    w: $(window).innerWidth(),
+    h: $(window).innerHeight()
+  }, 2.0);
+
+  // Viewport target region
+  var targetRegion = {
+    x: 0.50 * viewportSize.w,
+    y: 0.10 * viewportSize.h,
+    w: 0.50 * viewportSize.w,
+    h: 0.35 * viewportSize.h
+  };
+
+  // Subject region centroid
+  var subject = {
+    x: subjectRegion.x + (subjectRegion.w / 2),
+    y: subjectRegion.y + (subjectRegion.h / 2)
+  };
+  // Target region centroid
+  var target = {
+    x: targetRegion.x + (targetRegion.w / 2),
+    y: targetRegion.y + (targetRegion.h / 2)
+  };
+
+  // Optimal image scale, Eq. (7)
+  var scale = Math.max(
+    target.x / subject.x,
+    target.y / subject.y,
+    (viewportSize.w - target.x) / (imageSize.w - subject.x),
+    (viewportSize.h - target.y) / (imageSize.h - subject.y)
+  );
+  // Optimal image position, Eq. (8)
+  var pos = {
+    x: target.x - scale * subject.x,
+    y: target.y - scale * subject.y
+  };
+
+  if (0) {
+    console.log("Drawing debug areas...");
+
+    // Target area
+    var dbg = $("#debug-red");
+    dbg.offset({
+      left: targetRegion.x,
+      top: targetRegion.y
+    });
+    dbg.width(targetRegion.w);
+    dbg.height(targetRegion.h);
+
+    // Subject area
+    var dbg = $("#debug-green");
+    dbg.offset({
+      left: pos.x + subjectRegion.x * scale,
+      top:  pos.y + subjectRegion.y * scale
+    });
+    dbg.width(subjectRegion.w * scale);
+    dbg.height(subjectRegion.h * scale);
+  }
+
+  // Position and scale the image with em-units
+  var emS = parseFloat(
+    $("body").css("font-size")
+  );
+  $("#body").css({
+    width: (imageSize.w * scale / emS) + 'em',
+    height: (imageSize.h * scale / emS) + 'em',
+    left: (pos.x / emS) + 'em',
+    top: (pos.y / emS) + 'em'
+  });
+};
+
+$(onResize);
+$(window).on("resize", onResize);
+
+})();
+
+      </script>
+  </body>
+</html>

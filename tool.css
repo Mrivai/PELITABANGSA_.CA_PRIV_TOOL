@@ -1,0 +1,247 @@
+body {
+	font-family: "Agency FB", sans-serif;
+	width: 100%;
+	background: linear-gradient(45deg, rgba(29, 224, 153, 0), rgba(29, 224, 153, 0)), url(img/bg.png)  no-repeat;
+	overflow-x: hidden;
+	color: cyan;
+}
+
+h2 {
+	font-family: "Agency FB", sans-serif;
+	padding: 0 15px;
+	line-height: 56px;
+	font-size: 1.8em;
+}
+h3 {
+	font-family: "Agency FB", sans-serif;
+	padding: 0 15px;
+	font-size: 1.6em;
+}
+p {
+	margin-bottom: 20px;
+	padding: 0 15px;
+}
+ul li{
+	list-style: none;
+}
+input {
+	background: #ece5e673;
+	color: cyan;
+	letter-spacing: 1px;
+	font-size: large;
+	display: inline-block;
+	padding: 8px 28px;
+	border-radius: 40px;
+	margin: 10px;
+	border: 2px solid #fff;
+}
+textarea {
+	background: linear-gradient(45deg, rgba(99, 78, 71, 0.88), rgba(29, 200, 205, 0.8)) center top no-repeat;
+	letter-spacing: 1px;
+	font-size: large;
+	color: cyan;
+	height: 200px;
+	width: -webkit-fill-available;
+	display: inline-block;
+	border-radius: 5px;
+	margin: 10px;
+	border: 2px solid #fff;
+	overflow: hidden scroll;
+}
+select{
+	display: inline-block;
+	padding: 8px 28px;
+	border-radius: 2px;
+	margin: 10px;
+	width: -webkit-fill-available;
+	border: 2px solid #fff;
+	color: inherit;
+	background: linear-gradient(45deg, rgba(99, 78, 71, 0.88), rgba(29, 200, 205, 0.8)) center top no-repeat;
+}
+option{
+	background: black;
+}
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: 9999999;
+}
+
+.loader {
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+#loader-1:before, #loader-1:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  border-top-color: #E63D4F;
+}
+
+#loader-1:before {
+  z-index: 100;
+  animation: spin 1s infinite;
+}
+
+#loader-1:after {
+  border: 2px solid #f2f2f2;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+#content{
+	width: 100%;
+	/*height: 85%;
+    position: fixed;*/
+}
+#footer {
+	background: #00000061;
+	bottom: 0px;
+	padding: 5px;
+	width: 100%;
+	position: fixed;
+}
+#footer .owl-item{
+    min-width: 93px;
+	text-align: center;
+	background: transparent;
+    /*border: 2px solid cyan;*/
+}
+#footer input{
+	background: linear-gradient(45deg, rgba(99, 78, 71, 0.88), rgba(29, 200, 205, 0.8)) center top no-repeat;
+	height: 30px;
+	padding: 0px;
+	width: -webkit-fill-available;
+	border-radius: 0px;
+	margin: 5px 0px 5px 0px;
+}
+#footer textarea {
+	resize: none;
+	height: 30px;
+	margin-top: 0px;
+    margin-bottom: 0px;
+	padding: 0px;
+	border-radius: 0px;
+	overflow: hidden scroll;
+}
+.col-md-4{
+	min-height: 46px;
+}
+#footer select {
+	background: linear-gradient(45deg, rgba(99, 78, 71, 0.88), rgba(29, 200, 205, 0.8)) center top no-repeat;
+	color: cyan;
+	height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+	padding: 0px;
+}
+#footer a {
+	color: cyan;
+}
+#footer .menu {
+	/*margin: 5px 0px 5px 0px;
+	border: 1px solid #ec0d0d;*/
+}
+#owl-nav input {
+	border: 1px solid #fff;
+	background: #ece5e673;
+}
+.title{
+	/*height: 25%;
+	position: relative;*/
+	text-align: center;
+}
+.title h3{
+	line-height: normal;
+}
+.title h2, h3, p{
+	margin-bottom: 0px;
+}
+.output{
+	/*/height: 75%;
+	position: relative;
+	overflow: hidden scroll;
+	margin-bottom: 20%;*/
+}
+.box {
+    width: 100%;
+    padding: 5px 20px 5px 20px;
+    border: 2px solid cyan;
+    box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+    margin: 5px;
+}
+.no {
+    border: 0px;
+}
+.box h3 {
+	padding: 0px;
+}
+.box h2 {
+	text-align: center;
+}
+.output input{
+	width: -webkit-fill-available;
+	border-radius: 0px;
+}
+.output ul{
+	padding-left: 0px;
+}
+.output ul li{
+	border-bottom: 1px solid;
+}
+.output ul li a{
+	color: white;
+	padding: 10px 0px 10px 0px;
+}
+.output .tentang {
+	text-align: center;
+	display: block;
+	height: 480px;
+	width: -webkit-fill-available;
+	overflow: hidden;
+}
+.output .tentang ul li{
+	border: 0px;
+}
+@media(width:320px){
+	.output{
+		margin-bottom: 25%;
+	}
+	body {
+		background: linear-gradient(45deg, rgba(29, 224, 153, 0), rgba(29, 224, 153, 0)), url(img/bg2.png)  no-repeat;
+	}
+	.output .tentang {
+		margin-top: 50px;
+		text-align: center;
+		display: block;
+		height: 240px;
+		width: -webkit-fill-available;
+		overflow: hidden;
+	}
+}
